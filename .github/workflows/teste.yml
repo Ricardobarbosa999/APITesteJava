@@ -26,4 +26,4 @@ jobs:
 
         - name: Build and run tests
           run: |
-            mvn -Dtest=teste test
+            mvn -Dtest=TesteBasico test
