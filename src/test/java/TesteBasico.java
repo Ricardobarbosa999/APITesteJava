@@ -47,13 +47,13 @@ public class TesteBasico {
                 .get("/booking/595")
                 .then()
                 .statusCode(200)
-                .body("firstname", equalTo("Josh"))
+                .body("firstname", equalTo("John"))
                 .body("lastname", equalTo("Smith"))
                 .body("totalprice", equalTo(111))
                 .body("depositpaid", is(true))
                 .body("bookingdates.checkin", equalTo("2018-01-01"))
                 .body("bookingdates.checkout", equalTo("2019-01-01"))
-                .body("additionalneeds", equalTo("super bowls"))
+                .body("additionalneeds", equalTo("Breakfast"))
                 .log().all();
     }
 
