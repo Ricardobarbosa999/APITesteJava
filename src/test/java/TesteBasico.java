@@ -44,7 +44,7 @@ public class TesteBasico {
         given()
                 .header("Accept", "application/json")
                 .when()
-                .get("/booking/595")
+                .get("/booking/112")
                 .then()
                 .statusCode(200)
                 .body("firstname", equalTo("John"))
