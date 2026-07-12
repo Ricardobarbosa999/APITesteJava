@@ -48,7 +48,7 @@ public class TesteBasico {
                 .then()
                 .statusCode(200)
                 .body("firstname", equalTo("Josh"))
-                .body("lastname", equalTo("Allen"))
+                .body("lastname", equalTo("Smith"))
                 .body("totalprice", equalTo(111))
                 .body("depositpaid", is(true))
                 .body("bookingdates.checkin", equalTo("2018-01-01"))
