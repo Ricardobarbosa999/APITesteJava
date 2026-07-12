@@ -1,0 +1,29 @@
+name: Run Rest Assured Tests
+
+on:
+  push:
+    branches:
+      - master
+    pull_request:
+
+jobs:
+    run tests:
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Check out respository
+          uses: actions/checkout@v3
+
+        - name: Set up Java
+          uses: actions/setup-java@v3
+          with:
+            distribution: 'temurin'
+            java-version: '11'
+
+        - name: Set up Maven
+          run: |
+            mvn --version
+
+        - name: Build and run tests
+          run: |
+            mvn -Dtest=teste test
